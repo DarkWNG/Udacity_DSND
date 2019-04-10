@@ -22,7 +22,16 @@ def MSEStep(X, y, W, b, learn_rate = 0.005):
     W_new : predictor feature coefficients following gradient descent step
     b_new : intercept following gradient descent step
     """
+    # compute errors
+    y_pred = np.matmul(X, W) + b
+    error = y - y_pred
 
+    # compute steps
+    W_new = W + learn_rate * np.matmul(error, X)
+    b_new = b + learn_rate * error.sum()
+    return W_new, b_new
+
+    return W_new, b_new
 
 # The parts of the script below will be run when you press the "Test Run"
 # button. The gradient descent step will be performed multiple times on
