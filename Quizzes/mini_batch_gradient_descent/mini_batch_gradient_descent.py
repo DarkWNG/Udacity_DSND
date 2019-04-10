@@ -24,7 +24,6 @@ def MSEStep(X, y, W, b, learn_rate = 0.005):
     """
 
 
-
 # The parts of the script below will be run when you press the "Test Run"
 # button. The gradient descent step will be performed multiple times on
 # the provided dataset, and the returned list of regression coefficients
